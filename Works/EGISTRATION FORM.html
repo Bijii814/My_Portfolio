@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <link rel="stylesheet" href="css/malotform.css">
+</head>
+<body>
+<!-- labels should match the ids. Purpose of form won't send when submitted. -->
+<!-- in the input, should add attribute name so data will be sent to the server -->
+    <form action="submit" class="registration-form form-grid" method="post">
+        <a href="../index.html" class="back-btn">← Back to Profile</a>
+        <h2 class="form-title">User Registration Form</h2>
+
+        <div class="form-row">
+            <label for="firstname" class="form-label">Firstname:</label>
+            <!-- labels should match the ids. Purpose of form won't send when submitted. -->
+            <!-- in the input, should add attribute name so data will be sent to the server -->
+            <input type="text" placeholder="Your Firstname" id="firstname" name="firstname" class="form-input form-input--required">
+        </div>
+
+        <div class="form-row">
+            <label for="lastname" class="form-label">Lastname:</label>
+            <input type="text" placeholder="Your Lastname" id="lastname" name="lastname" class="form-input form-input--required">
+        </div>
+
+        <div class="form-row">
+            <label for="DOB" class="form-label">Date of Birth:</label>
+            <input type="date" name="DOB" id="DOB" class="form-input form-input--date">
+        </div>
+
+        <fieldset class="form-fieldset form-fieldset--gender">
+            <legend class="form-legend">Gender:</legend>
+            <div class="radio-group">
+                <input type="radio" name="gender" id="male" value="male" class="radio-input">
+                <label for="male" class="radio-label">Male</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" name="gender" id="female" value="female" class="radio-input">
+                <label for="female" class="radio-label">Female</label>
+            </div>
+        </fieldset>
+
+        <div class="form-section">
+            <h3 class="form-section-title">Address:</h3>
+
+            <div class="form-row">
+                <label for="barangay" class="form-label">Barangay:</label>
+                <input type="text" placeholder="Your Barangay" id="barangay" name="barangay" class="form-input">
+            </div>
+
+            <div class="form-row">
+                <label for="municipality" class="form-label">Municipality:</label>
+                <input type="text" placeholder="Your Municipality" id="municipality" name="municipality" class="form-input">
+            </div>
+
+            <div class="form-row">
+                <label for="province" class="form-label">Province:</label>
+                <input type="text" placeholder="Your Province" id="province" name="province" class="form-input">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label for="country" class="form-label">Country:</label>
+            <select name="country" id="country" class="form-select">
+                <option value="">Select country</option>
+                <option value="arg">Argentina</option>
+                <option value="canada">Canada</option>
+                <option value="ph">Philippines</option>
+                <option value="US">United States</option>
+            </select>
+        </div>
+
+        <div class="form-row">
+            <label for="mobile" class="form-label">Mobile Number:</label>
+            <input type="tel" placeholder="Type your mobile number" id="mobile" name="mobile" class="form-input form-input--tel">
+        </div>
+
+        <div class="form-row">
+            <label for="email" class="form-label">Email Address:</label>
+            <input type="email" placeholder="Your personal email address" id="email" name="email" class="form-input form-input--required form-input--email">
+        </div>
+
+        <fieldset class="form-fieldset form-fieldset--interests">
+            <legend class="form-legend">Interests:</legend>
+            <div class="checkbox-group">
+                <input type="checkbox" value="coding" name="interests" id="coding" class="checkbox-input">
+                <label for="coding" class="checkbox-label">Coding</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" value="layout" name="interests" id="layout" class="checkbox-input">
+                <label for="layout" class="checkbox-label">Layout</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" value="video-editing" name="interests" id="vediting" class="checkbox-input">
+                <label for="vediting" class="checkbox-label">Video Editing</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" value="cycling" name="interests" id="cycling" class="checkbox-input">
+                <label for="cycling" class="checkbox-label">Cycling</label>
+            </div>
+        </fieldset>
+
+        <hr class="form-divider">
+
+        <div class="form-section">
+            <h3 class="form-section-title">Parent/Guardian Information</h3>
+
+            <div class="form-row">
+                <label for="fname" class="form-label">Father's Fullname:</label>
+                <input type="text" placeholder="Father's Name" id="fname" name="fname" class="form-input">
+            </div>
+
+            <div class="form-row">
+                <label for="foccupation" class="form-label">Father's Occupation:</label>
+                <input type="text" placeholder="Father's Occupation" id="foccupation" name="foccupation" class="form-input">
+            </div>
+
+            <div class="form-row">
+                <label for="mname" class="form-label">Mother's Fullname:</label>
+                <input type="text" placeholder="Mother's Name" id="mname" name="mname" class="form-input">
+            </div>
+
+            <div class="form-row">
+                <label for="moccupation" class="form-label">Mother's Occupation:</label>
+                <input type="text" placeholder="Mother's Occupation" id="moccupation" name="moccupation" class="form-input">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label for="Resume" class="form-label">Upload Resume:</label>
+            <input type="file" id="Resume" name="Resume" class="form-input form-input--file" accept=".pdf,.doc,.docx">
+        </div>
+
+        <div class="form-actions">
+            <button type="button" class="btn btn--download">
+                <a href="images/1.jpg" class="download-link" download="sample-resume">Click to download</a>
+            </button>
+            <button type="submit" class="btn btn--submit">Submit</button>
+            <button type="reset" class="btn btn--reset">Reset</button>
+        </div>
+    </form>
+</body>
+</html>
